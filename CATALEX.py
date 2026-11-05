@@ -387,7 +387,17 @@ try:
         fig_radar = go.Figure()
         fig_radar.add_trace(go.Scatterpolar(
             r=target_topics["share"] * 100, theta=target_topics["topic"],
-            fill='toself', name=f"TARGET: {target['display_name']}", line=dict(color='red', width=3)
+            fill='toself', fillcolor='rgba(26, 26, 26, 0.15)',  name=f"TARGET: {target['display_name']}", 
+            line=dict(
+                color='#1A1A1A',                 # Deep Charcoal/Black to pop against colorful competitors
+                width=4,                         # Extra thick line
+                dash='solid'                     # Solid baseline anchor
+            ),
+            marker=dict(
+                size=8, 
+                color='#1A1A1A', 
+                symbol='circle'                  # Adds visible physical vertices
+            )
         ))
         
         for s_id in selected_ids:
