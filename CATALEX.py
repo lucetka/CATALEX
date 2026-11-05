@@ -37,7 +37,7 @@ import plotly.graph_objects as go
 # TUNABLE, ACCURATE & SECURE JOURNAL COMPETITOR FINDER
 # ---------------------------------------------------------
 
-st.set_page_config(page_title="Journal Competitor Finder", layout="wide")
+st.set_page_config(page_title="CATALEX - Journal Competitor Finder", layout="wide")
 
 BASE = "https://api.openalex.org"
 
@@ -103,9 +103,9 @@ st.sidebar.title("🔐 API Credentials")
 user_api_key = st.sidebar.text_input("OpenAlex API Key", type="password", help="Enter your premium OpenAlex API key.")
 user_mailto = st.sidebar.text_input("Polite Pool Email (mailto)", help="Optional: Enter your email address.")
 
-st.title("Journal Competitor Finder")
+st.title("🐈CATALEX")
 st.caption(
-    "Fully dynamic competitor scoping engine using OpenAlex true global profiles. "
+    "Cosine Alignment of Topics via OpenAlex - dynamic scope-based only journal competitor finder using OpenAlex true global profiles. "
     f"Target journal: **{TARGET_JOURNAL}**"
 )
 
