@@ -20,11 +20,14 @@ Key Features
 🚀 Planned Features & Architectural Horizons
 
 1. Robust Target Disambiguation & Semantic Matching
-
-• The Upgrade: Implement an optional smart resolution pipeline using the OpenAlex autocomplete or search endpoint for target journals.
+2. 
+• Almost bug fix: allow free choice of whitelisted journals, the preselected group is a leftover from my testing
+• Add filtering by metrics such as impact factor (for internal version only) or by "any metrics" uploaded 
+• Scope development in time
+• Essential Implement an optional smart resolution pipeline using the OpenAlex autocomplete or search endpoint for target journals.
 • Why it matters: While exact matching works perfectly for clear single-word titles like PROTEOMICS, it easily breaks down on complex or punctuated strings like Biochimica et Biophysica Acta - Proteins & Proteomics. Adding a fuzzy search stage will allow the app to gracefully resolve variations to the correct database entity before fetching the topic profile.
 
-2. Vector Space Taxonomy Maps (The FIASCO* Resurrexit)
+3. Vector Space Taxonomy Maps (The FIASCO* Resurrexit)
 
 • The Upgrade: Evaluate embedding the static OpenAlex Topic hierarchy/keywords directly in a low-dimensional vector space (e.g., using a compact transformer model or pre-computed embeddings).
 • Why it matters: This would bring back the spatial intuition of the original FIASCO app. Instead of just showing a tabular similarity score, we could plot journals as structural contour maps or 2D density distributions over the global landscape of science, matching the visual elegance of the original prototype without the monumental updating friction.
