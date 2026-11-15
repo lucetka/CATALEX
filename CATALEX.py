@@ -1,5 +1,4 @@
 #CATALEXv2.0.py
-
 import streamlit as st
 import requests
 import pandas as pd
@@ -582,10 +581,17 @@ try:
         for s_id in selected_ids:
             sub_sj = df_heatmap[df_heatmap["Source_ID"] == s_id].copy()
             r_values = []
+            #for topic_name in target_topics["topic"]:
+            #    match = sub_sj[sub_sj["Topic"] == topic_name]
+            #    val = float(match["Share (%)"].values) if not match.empty else 0.0
+            #    r_values.append(val)
+
+            # as the above was working on Windows but failing on streamlit cloud (unix?) here a more robust way:
             for topic_name in target_topics["topic"]:
                 match = sub_sj[sub_sj["Topic"] == topic_name]
-                val = float(match["Share (%)"].values) if not match.empty else 0.0
+                val = float(match["Share (%)"].item()) if not match.empty else 0.0
                 r_values.append(val)
+
 
             fig_radar.add_trace(go.Scatterpolar(
                 r=r_values, theta=target_topics["topic"], fill="toself", name=id_to_name.get(s_id, s_id)
