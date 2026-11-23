@@ -228,10 +228,19 @@ user_mailto = st.sidebar.text_input(
 # ---------------------------------------------------------
 
 st.title("🐈 CATALEX")
-st.caption(
-    "Cosine Alignment of Topics via OpenAlex - dynamic usinf real time data from OpenAlex; identifies competitors purely by topical scope, with optional runtime filtering for custom metrics (e.g., Impact Factor) via file upload."
-    f"Target journal: **{TARGET_JOURNAL}**"
+#st.caption(
+#    "Cosine Alignment of Topics via OpenAlex - dynamic usinf real time data from OpenAlex; identifies competitors purely by topical scope, with optional runtime filtering for custom metrics (e.g., Impact Factor) via file upload."
+#    f"Target journal: **{TARGET_JOURNAL}**"
+#)
+
+st.subheader("*C*osine *A*lignment of *T*opics via Open*Alex*: Scope-Based Journal Competitor Finder")
+st.markdown(
+    "Identifies competitors using **Cosine Alignment of Topics** on real-time **OpenAlex** data. "
+    "Matches purely on topical scope by default, with optional runtime filtering for custom metrics "
+    "(e.g., Impact Factor) via file upload."
 )
+st.caption(f"🎯 Currently selected target journal: **{TARGET_JOURNAL}**")
+
 
 # ---------------------------------------------------------
 # OpenAlex Helpers
