@@ -233,7 +233,9 @@ st.title("🐈 CATALEX")
 #    f"Target journal: **{TARGET_JOURNAL}**"
 #)
 
-st.subheader("***C***osine ***A***lignment of ***T***opics via Open***Alex***: Scope-Based Journal Competitor Finder")
+#st.subheader("***C***osine ***A***lignment of ***T***opics via Open***Alex***: Scope-Based Journal Competitor Finder")
+st.subheader(":blue[C]osine :blue[A]lignment of :blue[T]opics via Open:blue[ALEX]: Scope-Based Journal Competitor Finder")
+
 st.markdown(
     "Identifies competitors using **Cosine Alignment of Topics** on real-time **OpenAlex** data. "
     "Matches purely on topical scope by default, with optional runtime filtering for custom metrics "
